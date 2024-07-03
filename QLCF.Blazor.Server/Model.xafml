@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel>
+    <Class Name="QLCF.Module.BusinessObjects.database.Doanhthu">
+      <OwnMembers>
+        <Member Name="Chira" DisplayFormat="{0:### ### ###}" />
+        <Member Name="Ngay" DisplayFormat="{0:dd/MM/yyyy HH:mm}" />
+        <Member Name="Thuvao" DisplayFormat="{0:### ### ###}" />
+        <Member Name="Tong" DisplayFormat="{0:### ### ###}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="QLCF.Module.BusinessObjects.database.Donhang">
+      <OwnMembers>
+        <Member Name="Ngaydathang" DisplayFormat="{0:dd/MM/yyyy }" />
+      </OwnMembers>
+    </Class>
+    <Class Name="QLCF.Module.BusinessObjects.database.Hoadon">
+      <OwnMembers>
+        <Member Name="Ngaytao" DisplayFormat="{0:dd/MM/yyyy HH:mm}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="QLCF.Module.BusinessObjects.database.HoadonCT">
+      <OwnMembers>
+        <Member Name="Gia" DisplayFormat="{0:### ### ###}" />
+        <Member Name="Thanhtien" DisplayFormat="{0:### ### ###}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="QLCF.Module.BusinessObjects.database.Luong">
+      <OwnMembers>
+        <Member Name="Tienluong" DisplayFormat="{0:### ### ###}" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <NavigationItems NavigationStyle="Accordion" />
+  <Options UIType="TabbedMDI" RestoreTabbedMdiLayout="False" ShowTabImage="True" />
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="24.1.3.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerBlazorModule" Version="24.1.3.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerModuleBase" Version="24.1.3.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="24.1.3.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="Doanhthu_DetailView">
+      <Items>
+        <PropertyEditor Id="Chira" DisplayFormat="{0:### ### ###}" />
+        <PropertyEditor Id="Thuvao" DisplayFormat="{0:### ### ###}" />
+        <PropertyEditor Id="Tong" DisplayFormat="{0:### ### ###}" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Hoadon_DetailView">
+      <Items>
+        <PropertyEditor Id="Ngaytao" DisplayFormat="{0:dd/MM/yyyy HH:mm}" />
+      </Items>
+    </DetailView>
+    <ListView Id="Hoadon_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Ngaytao" DisplayFormat="{0:d}" />
+      </Columns>
+    </ListView>
+    <DetailView Id="HoadonCT_DetailView">
+      <Items>
+        <PropertyEditor Id="Gia" DisplayFormat="{0:### ### ###}" />
+        <PropertyEditor Id="Thanhtien" DisplayFormat="{0:### ### ###}" />
+      </Items>
+    </DetailView>
+  </Views>
+</Application>
